@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="top-zx",
-    version="0.0.2",
+    version="0.1.0",
     author="lvcha",
     author_email="zhaoxicn@foxmail.com",
     description="Taobao SDK for taobao spreader",
