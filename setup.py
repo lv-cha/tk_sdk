@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="top-zx",
-    version="0.0.1",
+    version="0.0.2",
     author="lvcha",
     author_email="zhaoxicn@foxmail.com",
     description="Taobao SDK for taobao spreader",
@@ -13,9 +13,9 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/lv-cha/tk_sdk",
     packages=setuptools.find_packages(),
+    license="Mulan",
     classifiers=[
         "Programming Language :: Python :: 3",
-        "License :: OSI Approved :: MulanPSL-1.0",
         "Operating System :: OS Independent",
     ],
     python_requires='>=3.4',
