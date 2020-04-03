@@ -256,19 +256,6 @@ class RestApi(object):
             raise RequestException('invalid http status ' + str(response.status) + ',detail body:' + response.read())
         result = response.read()
         jsonobj = json.loads(result)
-        if jsonobj.get("error_response"):
-            error = TopException()
-            if jsonobj["error_response"].get(P_CODE) :
-                error.errorcode = jsonobj["error_response"][P_CODE]
-            if jsonobj["error_response"].get(P_MSG) :
-                error.message = jsonobj["error_response"][P_MSG]
-            if jsonobj["error_response"].get(P_SUB_CODE) :
-                error.subcode = jsonobj["error_response"][P_SUB_CODE]
-            if jsonobj["error_response"].get(P_SUB_MSG) :
-                error.submsg = jsonobj["error_response"][P_SUB_MSG]
-            error.application_host = response.getheader("Application-Host", "")
-            error.service_host = response.getheader("Location-Host", "")
-            raise error
         return jsonobj
     
     
