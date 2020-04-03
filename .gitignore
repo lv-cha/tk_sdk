@@ -211,3 +211,6 @@ dmypy.json
 .pyre/
 
 .idea/
+
+# demo
+demo.py
